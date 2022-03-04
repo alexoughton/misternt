@@ -48,3 +48,5 @@ This modified setup process does the following:
 2. Provides pre-created boot floppies for the setup environment which specify MiSTer-specific steps and include the SP6a components
 3. Boots from those floppies, provides drivers to use during manual device specification, and proceeds with Windows NT setup
 4. Executes a final script which finishes Service Pack 6a setup, and properly sets display resolution registry keys.
+
+The "boot first" image is an MS-DOS boot disk with the necessary environment to perform step 1. The main script is in autoexec.bat. The image also includes the "fdisk" and "vinfo" tools from FreeDOS to assist with partitioning.
