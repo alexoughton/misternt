@@ -23,6 +23,8 @@ It would not be possible to run Windows NT on the MiSTer without two amazing dri
 
 ## Getting started
 
+A full setup guide will soon be provided on the MiSTer forums. Here's the short version...
+
 To begin, place uniata.sys in your MiSTer's ao486\shared directory. You will also need to copy the NT setup ISO and all of the images provided here to your ao486 directory. The hard disk image will need to be in ao486 as well. Start up the ao486 core in MiSTer and mount the following:
 
 1. The floppy image "Boot first - Manufacturer-supplied hardware support disk.img" from this project in Floppy A:
@@ -30,4 +32,19 @@ To begin, place uniata.sys in your MiSTer's ao486\shared directory. You will als
 3. The Windows NT Workstation setup ISO in IDE 1-0.
 4. The CD image "misternt.iso" from this project in IDE 1-1.
 
-Then select "Reset and apply HDD" from the ao486 menu to begin.
+Then select "Reset and apply HDD" from the ao486 menu to begin. During setup you should skip automatic detection of mass storage devices and then use the option to provide your own driver. This can be found on the "boot first" image. You should also ensure that the "Display" type has been changed from "Auto Detect" to "Other", and then again specify the driver found on that image.
+
+## Technical information
+
+A normal Windows NT setup process starts from MS-DOS and does the following:
+
+1. Copies the setup CD to a temporary location on disk
+2. Creates three boot floppies containing the setup environment
+3. Boots from those floppies, auto-detects hardware and drivers and proceeds with Windows NT setup
+
+This modified setup process does the following:
+
+1. Copies the setup CD to a temporary location on disk, and then partially replaces many of the files with those from Service Pack 6a (on the CD image)
+2. Provides pre-created boot floppies for the setup environment which specify MiSTer-specific steps and include the SP6a components
+3. Boots from those floppies, provides drivers to use during manual device specification, and proceeds with Windows NT setup
+4. Executes a final script which finishes Service Pack 6a setup, and properly sets display resolution registry keys.
