@@ -51,10 +51,10 @@ echo.
 echo Do you want setup to create an MS-DOS prompt boot option?
 echo For this to work, you must not convert to NTFS during setup.
 echo.
-choice /c:yn
+choice
 
-if errorlevel 1 goto sys
 if errorlevel 2 goto nosys
+if errorlevel 1 goto sys
 goto format
 
 :sys
