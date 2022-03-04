@@ -21,7 +21,7 @@ echo Cancel now if you don't want this!
 echo.
 pause
 
-if not exist a:\uniata.sys goto drivermissing
+if not exist a:\uniata.sys goto copydriver
 
 :proceed
 vinfo /d c
@@ -29,7 +29,8 @@ if errorlevel 15 goto partition
 if errorlevel 5 goto format
 
 echo Found a valid file system on your hard disk.
-echo Will continue installing NT as-is.
+echo Will continue installing NT in-place on this disk.
+pause
 goto winnt
 
 :partition
@@ -80,11 +81,17 @@ echo.
 :endlessloop
 goto endlessloop
 
+:copydriver
+a:\misterfs m
+:drivercheck
+if not exist m:\uniata.sys goto drivermissing
+copy m:\uniata.sys a:\
+goto proceed
+
 :drivermissing
 echo This disk does not yet include the required uniata driver,
 echo but can copy it from your MisTer's "shared" directory.
 echo.
-:drivercheck2
 echo Download the latest release from:
 echo http://alter.org.ua/en/soft/win/uni_ata/
 echo.
@@ -92,21 +99,4 @@ echo Place uniata.sys from the archive in your MiSTer's
 echo "ao486\shared" directory.
 echo.
 pause
-a:\misterfs m
-
-:drivercheck2
-if not exist m:\uniata.sys goto driverstillmissing
-goto driverpresent
-
-:driverstillmissing
-echo.
-echo Not seeing the required file in the shared directory.
-goto drivercheck2
-
-:driverpresent
-copy m:\uniata.sys a:\
-echo.
-echo File copied to the floppy image. You will not
-echo need to repeat this step in the future.
-echo.
-goto proceed
+goto drivercheck
