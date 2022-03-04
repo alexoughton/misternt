@@ -1,0 +1,10 @@
+REGEDIT4
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Hardware Profiles\Current\System\CurrentControlSet\Services\vbemp\Device0]
+"DefaultSettings.BitsPerPel"=dword:0000000F
+"DefaultSettings.XResolution"=dword:00000320
+"DefaultSettings.YResolution"=dword:00000258
+"DefaultSettings.VRefresh"=dword:00000001
+"DefaultSettings.Flags"=dword:00000000
+"DefaultSettings.XPanning"=dword:00000000
+"DefaultSettings.YPanning"=dword:00000000
