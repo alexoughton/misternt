@@ -77,10 +77,10 @@ xcopy s:\ss c:\$win_nt$.~ls\i386 /Y /S
 echo.
 echo File copy complete. Now mount disk
 echo "Windows NT Workstation Boot Disk" in floppy A:
-echo and press CTRL+ALT+DEL to reboot.
+echo and press a key to reboot.
 echo.
-:endlessloop
-goto endlessloop
+pause
+fdisk /reboot
 
 :copydriver
 a:\misterfs m
