@@ -1,0 +1,9 @@
+[setupparams]
+userexecute = "e:\finalsteps.cmd"
+
+[data]
+floppyless = "0"
+msdosinitiated = "1"
+
+[Display]
+ConfigureAtLogon=1
