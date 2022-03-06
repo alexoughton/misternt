@@ -32,7 +32,7 @@ To begin, place uniata.sys in your MiSTer's ao486\shared directory. You will als
 3. The Windows NT Workstation setup ISO in IDE 1-0.
 4. The CD image "misternt.iso" from this project in IDE 1-1.
 
-Then select "Reset and apply HDD" from the ao486 menu to begin. During setup you should skip automatic detection of mass storage devices and then use the option to provide your own driver. This can be found on the "boot first" image. You should also ensure that the "Display" type has been changed from "Auto Detect" to "Other", and then again specify the driver found on that image.
+Then select "Reset and apply HDD" from the ao486 menu to begin. Both CD ISOs should remain mounted until setup is fully complete. During setup you should skip automatic detection of mass storage devices and then use the option to provide your own driver. This can be found on the "boot first" image. You should also ensure that the "Display" type has been changed from "Auto Detect" to "Other", and then again specify the driver found on that image.
 
 ## Technical information
 
