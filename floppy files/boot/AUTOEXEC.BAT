@@ -42,7 +42,6 @@ pause
 
 fdisk /clear 1
 fdisk /prio:100,100 1
-fdisk /modify:1,6 1
 fdisk /mbr /reboot
 
 :format
