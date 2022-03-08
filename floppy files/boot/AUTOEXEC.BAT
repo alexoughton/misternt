@@ -77,10 +77,9 @@ xcopy s:\ss c:\$win_nt$.~ls\i386 /Y /S
 echo.
 echo File copy complete. Now mount disk
 echo "Windows NT Workstation Boot Disk" in floppy A:
-echo and press a key to reboot.
+echo and press CTRL+ALT+DEL to reboot.
 echo.
-pause
-fdisk /reboot
+goto end
 
 :copydriver
 a:\misterfs m
@@ -101,3 +100,5 @@ echo "ao486\shared" directory.
 echo.
 pause
 goto drivercheck
+
+:end
