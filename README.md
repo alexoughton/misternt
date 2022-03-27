@@ -17,7 +17,7 @@ It would not be possible to run Windows NT on the MiSTer without two amazing dri
 
 ## Important setup notes - READ FIRST
 
-1. There is a bug in MiSTer's floppy implementation for x86 which has been fixed but is awaiting release. Until this is released, you will either need to use a version of MiSTer from unstable nightlies or "eject" floppies (by pressing backspace on the floppy image selection screen) and then select the next one. Just swapping floppy images will not work until this fix is released.
+1. You must have updated the main MiSTer binary, ao486 itself and boot0.rom and boot1.rom at least as recently as March 26th 2022, as several important fixes affecting Windows NT have been released.
 2. Do not attempt to set the system time during setup, as this will cause a BSOD crash. You may select time zone if you wish, but changing to the date/time tab will cause a crash.
 3. During setup you will see an error related to the installation of the graphics driver which should be ignored (the driver will be fully initialized later by a script which runs at the end of setup). Just clear the three dialog boxes which appear, and then click "cancel" on the Display Configuration window to continue.
 
