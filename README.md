@@ -23,16 +23,7 @@ It would not be possible to run Windows NT on the MiSTer without two amazing dri
 
 ## Getting started
 
-A full setup guide will soon be provided on the MiSTer forums. Here's the short version...
-
-To begin, place uniata.sys in your MiSTer's ao486\shared directory. You will also need to copy the NT setup ISO and all of the images provided here to your ao486 directory. The hard disk image will need to be in ao486 as well. Start up the ao486 core in MiSTer and mount the following:
-
-1. The floppy image "Boot first - Manufacturer-supplied hardware support disk.img" from this project in Floppy A:
-2. Your hard disk image in IDE 0-0.
-3. The Windows NT Workstation setup ISO in IDE 1-0.
-4. The CD image "misternt.iso" from this project in IDE 1-1.
-
-Then select "Reset and apply HDD" from the ao486 menu to begin. Both CD ISOs should remain mounted until setup is fully complete. During setup you should skip automatic detection of mass storage devices and then use the option to provide your own driver. This can be found on the "boot first" image. You should also ensure that the "Display" type has been changed from "Auto Detect" to "Other", and then again specify the driver found on that image.
+A full setup guide is provided on the MiSTer forums: https://misterfpga.org/viewtopic.php?p=47436#p47436
 
 ## Technical information
 
